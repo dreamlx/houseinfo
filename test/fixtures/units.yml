@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  no_id: 1
+  innerarea: 1.5
+  buildarea: 1.5
+  price_of_unit: 1.5
+  price_of_total: 1.5
+  member: MyString
+  state: MyString
+
+two:
+  no_id: 1
+  innerarea: 1.5
+  buildarea: 1.5
+  price_of_unit: 1.5
+  price_of_total: 1.5
+  member: MyString
+  state: MyString
