@@ -1,4 +1,6 @@
 Housinfo::Application.routes.draw do
+  resources :states
+
   resources :units
 
   resources :builds

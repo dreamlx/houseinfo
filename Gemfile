@@ -32,7 +32,7 @@ end
 gem 'jquery-rails'
 
 gem "devise", ">= 2.1.2"
-gem "state_machine"
+#gem "state_machine"
 gem "rails_admin" #後臺管理
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
