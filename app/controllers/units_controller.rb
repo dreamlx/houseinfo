@@ -2,7 +2,13 @@ class UnitsController < ApplicationController
   # GET /units
   # GET /units.json
   def index
-    @units = Unit.all
+    building_no = params[:unit][:building_id] unless params[:unit].blank?
+    state_code = params[:unit][:state_id] unless params[:unit].blank?
+    sql = "1"
+    sql += " and states.code like '#{state_code}'" unless state_code.nil?
+    sql += " and buildings.title like '#{building_no}'" unless building_no.nil?
+    
+    @units = Unit.joins(:building,:state).where(sql)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -77,7 +83,7 @@ class UnitsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to units_url }
-      format.json { head :no_content }
+      format.json { render :nothing, :status => 403 }
     end
   end
 end
