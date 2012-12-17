@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>No:</b>
+  <%= @unit.no_id %>
+</p>
+
+<p>
+  <b>Innerarea:</b>
+  <%= @unit.innerarea %>
+</p>
+
+<p>
+  <b>Buildarea:</b>
+  <%= @unit.buildarea %>
+</p>
+
+<p>
+  <b>Price of unit:</b>
+  <%= @unit.price_of_unit %>
+</p>
+
+<p>
+  <b>Price of total:</b>
+  <%= @unit.price_of_total %>
+</p>
+
+<p>
+  <b>Member:</b>
+  <%= @unit.member %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @unit.state %>
+</p>
+
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>

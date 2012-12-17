@@ -1,0 +1,45 @@
+<%= form_for(@unit) do |f| %>
+  <% if @unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+      <% @unit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :no_id %><br />
+    <%= f.number_field :no_id %>
+  </div>
+  <div class="field">
+    <%= f.label :innerarea %><br />
+    <%= f.text_field :innerarea %>
+  </div>
+  <div class="field">
+    <%= f.label :buildarea %><br />
+    <%= f.text_field :buildarea %>
+  </div>
+  <div class="field">
+    <%= f.label :price_of_unit %><br />
+    <%= f.text_field :price_of_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :price_of_total %><br />
+    <%= f.text_field :price_of_total %>
+  </div>
+  <div class="field">
+    <%= f.label :member %><br />
+    <%= f.text_field :member %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
