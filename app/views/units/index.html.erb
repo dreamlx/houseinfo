@@ -1,21 +1,23 @@
-<h1>Listing units</h1>
+<h1>售楼单元信息</h1>
 
 <table>
   <tr>
-    <th>No</th>
-    <th>Innerarea</th>
-    <th>Buildarea</th>
-    <th>Price of unit</th>
-    <th>Price of total</th>
-    <th>Member</th>
-    <th>State</th>
-    <th>building</th>
+		<th>楼号</th>
+    <th>序号</th>
+    <th>套内面积</th>
+    <th>建筑面积</th>
+    <th>建筑单价（万元）</th>
+    <th>建筑总价（万元）</th>
+    <th>业务员</th>
+    <th>房屋状态</th>
+    
     <th></th>
     <th></th>
   </tr>
 
 <% @units.each do |unit| %>
   <tr>
+		<td><%= unit.building.title %></td>
     <td><%= unit.unit_no %></td>
     <td><%= unit.innerarea %></td>
     <td><%= unit.buildarea %></td>
@@ -23,14 +25,14 @@
     <td><%= unit.price_of_total %></td>
     <td><%= unit.member %></td>
     <td><%= unit.state.title %></td>
-		<td><%= unit.building.title %></td>
-    <td><%= link_to 'Show', unit %></td>
-    <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
-    <td><%= link_to 'Destroy', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		
+    <td><%#= link_to 'Show', unit %></td>
+    <td><%= link_to '编辑', edit_unit_path(unit) %></td>
+    <td><%= link_to '删除', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Unit', new_unit_path %>
+<%= link_to '新建单元', new_unit_path %>

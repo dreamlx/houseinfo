@@ -10,34 +10,38 @@
       </ul>
     </div>
   <% end %>
-
+	
+  <p>
+    <label for="大楼楼号">大楼楼号:</label>    
+<%= f.select :building_id, Building.all.collect { |mp| [mp.title, mp.id]} %>
+  </p>
   <div class="field">
-    <%= f.label :no_id %><br />
-    <%= f.number_field :no_id %>
+    序号：<br />
+    <%= f.number_field :unit_no %>
   </div>
   <div class="field">
-    <%= f.label :innerarea %><br />
+    套内面积M2：<br />
     <%= f.text_field :innerarea %>
   </div>
   <div class="field">
-    <%= f.label :buildarea %><br />
+    建筑面积M2：<br />
     <%= f.text_field :buildarea %>
   </div>
   <div class="field">
-    <%= f.label :price_of_unit %><br />
+    建筑单价（万元）：<br />
     <%= f.text_field :price_of_unit %>
   </div>
   <div class="field">
-    <%= f.label :price_of_total %><br />
+    建筑总价（万元）：<br />
     <%= f.text_field :price_of_total %>
   </div>
   <div class="field">
-    <%= f.label :member %><br />
+    业务员<br />
     <%= f.text_field :member %>
   </div>
   <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    房屋状态<br />
+    <%= f.select :state_id, State.all.collect { |mp| [mp.title, mp.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -48,3 +48,7 @@ gem "rails_admin" #後臺管理
 
 # To use debugger
 # gem 'debugger'
+
+# Bootstrap  
+#gem 'less-rails-bootstrap' 
+#gem 'therubyracer' 
