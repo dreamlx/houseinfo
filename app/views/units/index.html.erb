@@ -1,6 +1,11 @@
-<h1>售楼单元信息</h1>
-
-<table>
+<h1>富春东方后台管理</h1>
+<div >
+<form name="search" action="/units" method="get">
+	<%= select 'unit','building_id',Building.all.collect{|p|[p.title, p.title]}%>
+<input type="submit" value="查找" />
+</form>
+</div>
+<table width='70%'>
   <tr>
 		<th>楼号</th>
     <th>序号</th>
@@ -26,7 +31,7 @@
     <td><%= unit.member %></td>
     <td><%= unit.state.title %></td>
 		
-    <td><%#= link_to 'Show', unit %></td>
+    
     <td><%= link_to '编辑', edit_unit_path(unit) %></td>
     <td><%= link_to '删除', unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

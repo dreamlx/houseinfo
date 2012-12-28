@@ -1,3 +1,4 @@
+# coding: utf-8
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -7,11 +8,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 State.delete_all
 Building.delete_all
-State.create(code:1,title:'active')
-State.create(code:2,title:'limit')
-State.create(code:3,title:'hold')
-State.create(code:4,title:'order')
-State.create(code:5,title:'signed')
+State.create(code:1,title:'可售')
+State.create(code:2,title:'限制')
+State.create(code:3,title:'保留')
+State.create(code:4,title:'认购')
+State.create(code:5,title:'签约')
 
 Building.create(title:'A',number:1,desc:'building A')
 Building.create(title:'B',number:2,desc:'building B')
